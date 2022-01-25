@@ -25,3 +25,20 @@
 # "i would like #{5} tacos"
 # We can specify multiple conditions with || (OR) and && (AND)
 # if dinner == "tacos" || dinner == "pizza"
+
+#set dice
+die_1 = rand(1..6)
+die_2 = rand(1..6)
+total = die_1 + die_2
+
+puts die_1
+puts die_2
+
+#set rules for game
+if die_1+die_2 == 7 || die_1+die_2 == 11
+    puts "you win!"
+elsif die_1+die_2 == 2 || die_1+die_2 == 3 || die_1+die_2 == 12
+    puts "you lose!"
+else 
+    puts "the total is #{total}"
+end
