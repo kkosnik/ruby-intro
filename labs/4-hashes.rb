@@ -26,3 +26,18 @@ weather_data = {
     { temperature: 70, conditions: "Partly Cloudy" }
   ]
 }
+
+#set variables
+temp_current = weather_data[:current][:temperature]
+conditions_current = weather_data[:current][:conditions]
+
+temp_tomorrow = weather_data[:forecast][0][:temperature]
+conditions_tomorrow = weather_data[:forecast][0][:conditions]
+
+temp_next_day = weather_data[:forecast][1][:temperature]
+conditions_next_day = weather_data[:forecast][1][:conditions]
+
+#write weather info
+puts "Currently it is #{temp_current} degrees and #{conditions_current}!" 
+puts "Tomorrow it will be #{conditions_tomorrow} skies, with a temperature of #{temp_tomorrow}."
+puts "The Next Day will be #{conditions_next_day} skies, with a temperature of #{temp_next_day}."
